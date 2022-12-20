@@ -17,7 +17,7 @@ import java.util.Collections;
 @PageTitle("Contacts | Vaadin CRM")
 @Route(value = "")
 public class ListView extends VerticalLayout {
-    
+
     Grid<Contact> grid =new Grid<>(Contact.class);
     TextField filterText = new TextField();
 
