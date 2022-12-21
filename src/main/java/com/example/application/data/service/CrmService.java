@@ -6,7 +6,6 @@ import com.example.application.data.entity.Status;
 import com.example.application.data.repository.CompanyRepository;
 import com.example.application.data.repository.ContactRepository;
 import com.example.application.data.repository.StatusRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,7 +35,7 @@ public class CrmService {
         return contactRepository.count();
     }
 
-    public void delete(Contact contact) {
+    public void deleteContact(Contact contact) {
         contactRepository.delete(contact);
     }
 
