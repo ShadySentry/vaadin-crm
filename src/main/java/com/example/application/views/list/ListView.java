@@ -14,9 +14,12 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.security.PermitAll;
+
 
 @PageTitle("Contacts | Vaadin CRM")
 @Route(value = "",layout = MainLayout.class)
+@PermitAll
 public class ListView extends VerticalLayout {
 
     Grid<Contact> grid = new Grid<>(Contact.class);
