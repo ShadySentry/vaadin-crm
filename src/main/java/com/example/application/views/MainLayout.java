@@ -1,5 +1,6 @@
 package com.example.application.views;
 
+import com.example.application.views.list.DashboardView;
 import com.example.application.views.list.ListView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -36,7 +37,8 @@ public class MainLayout extends AppLayout {
         listView.setHighlightCondition(HighlightConditions.sameLocation());
 
         addToDrawer(new VerticalLayout(
-                listView
+                listView,
+                new RouterLink("Dashboard",DashboardView.class)
         ));
     }
 }
