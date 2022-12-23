@@ -13,10 +13,13 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 
 import javax.annotation.security.PermitAll;
 
 
+@org.springframework.stereotype.Component
+@Scope("prototype")
 @PageTitle("Contacts | Vaadin CRM")
 @Route(value = "",layout = MainLayout.class)
 @PermitAll
